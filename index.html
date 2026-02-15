@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Карьерный маршрут</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #f4f6f9;
+            color: #1f2d3d;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #0b3c6d;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            max-width: 900px;
+            margin: auto;
+            font-size: 18px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 50px 20px;
+        }
+
+        h2 {
+            border-left: 6px solid #0b3c6d;
+            padding-left: 15px;
+            color: #0b3c6d;
+            margin-bottom: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            margin-bottom: 25px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        /* TIMELINE */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 10px;
+            top: 0;
+            width: 4px;
+            height: 100%;
+            background: #0b3c6d;
+        }
+
+        .event {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .event::before {
+            content: "";
+            position: absolute;
+            left: -2px;
+            top: 5px;
+            width: 16px;
+            height: 16px;
+            background: #0b3c6d;
+            border-radius: 50%;
+        }
+
+        .event h4 {
+            margin: 0 0 5px 0;
+            color: #0b3c6d;
+        }
+
+        /* FORM */
+        form {
+            display: grid;
+            gap: 15px;
+        }
+
+        input, select, button {
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background: #0b3c6d;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #092f55;
+        }
+
+        footer {
+            background: #0b3c6d;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+            font-size: 14px;
+        }
+
+        /* MOBILE */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 32px;
+            }
+            section {
+                padding: 35px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Карьерный маршрут</h1>
+    <p>
+        Социальный проект по содействию занятости населения  
+        в городе Стерлитамак и Республике Башкортостан
+    </p>
+</header>
+
+<section>
+    <h2>Актуальность проекта</h2>
+    <div class="card">
+        Проект направлен на решение проблемы структурной безработицы и разрыва между
+        требованиями работодателей и компетенциями соискателей через практико-ориентированное обучение.
+    </div>
+</section>
+
+<section>
+    <h2>Цель и задачи</h2>
+    <div class="grid">
+        <div class="card">
+            <strong>Цель:</strong><br>
+            Создание системы содействия занятости через обучение и стажировки с работодателями.
+        </div>
+        <div class="card">
+            <strong>Задачи:</strong>
+            <ul>
+                <li>Анализ рынка труда</li>
+                <li>5 образовательных интенсивов</li>
+                <li>Гарантированные стажировки</li>
+                <li>Трудоустройство не менее 70%</li>
+                <li>Постпроектное сопровождение</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>План реализации проекта</h2>
+    <div class="card timeline">
+        <div class="event">
+            <h4>Февраль – март</h4>
+            Анализ рынка труда и заключение партнёрских соглашений
+        </div>
+        <div class="event">
+            <h4>Март – апрель</h4>
+            Разработка программ образовательных интенсивов
+        </div>
+        <div class="event">
+            <h4>Май</h4>
+            Информационная кампания и отбор участников
+        </div>
+        <div class="event">
+            <h4>Июнь – август</h4>
+            Проведение образовательных интенсивов
+        </div>
+        <div class="event">
+            <h4>Август – сентябрь</h4>
+            Производственные стажировки
+        </div>
+        <div class="event">
+            <h4>Сентябрь – октябрь</h4>
+            Трудоустройство и сопровождение
+        </div>
+        <div class="event">
+            <h4>Октябрь</h4>
+            Итоговый мониторинг и оценка эффективности
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Форма заявки участника</h2>
+    <div class="card">
+        <form>
+            <input type="text" placeholder="ФИО" required>
+            <input type="number" placeholder="Возраст" required>
+            <input type="tel" placeholder="Телефон" required>
+            <input type="email" placeholder="Email">
+            <select required>
+                <option value="">Категория участника</option>
+                <option>Молодой специалист</option>
+                <option>Выпускник</option>
+                <option>Предпенсионный возраст</option>
+                <option>Безработный (ЦЗН)</option>
+            </select>
+            <button type="submit">Отправить заявку</button>
+        </form>
+        <p style="font-size:14px;color:#666;margin-top:10px;">
+            * Форма демонстрационная (учебный проект)
+        </p>
+    </div>
+</section>
+
+<footer>
+    Социальный проект «Карьерный маршрут»<br>
+    Стерлитамак, 2025
+</footer>
+
+</body>
+</html>
